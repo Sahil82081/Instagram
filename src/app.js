@@ -13,7 +13,7 @@ const socket = require('socket.io')
 //     credentials: true
 // };
 const corsOptions = {
-    origin: 'instagram-self-one.vercel.app',
+    origin: 'https://instagram-self-one.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     exposedHeaders: ['Content-Length'],
