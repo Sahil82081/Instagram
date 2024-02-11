@@ -34,7 +34,11 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/api', route)
 
 const server = createServer(app)
-
+app.get('/',(req,res)=>{
+    res.status(200).json({
+    Message:"Hello"
+    })
+})
 server.listen(PORT, () => {
     console.log(`Server Running at ${PORT}`)
 })
