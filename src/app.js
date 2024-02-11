@@ -12,8 +12,15 @@ const socket = require('socket.io')
 //     exposedHeaders: ['Content-Length'],
 //     credentials: true
 // };
+// const corsOptions = {
+//     origin: 'https://instagram-self-one.vercel.app',
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     allowedHeaders: ['Content-Type', 'Authorization'],
+//     exposedHeaders: ['Content-Length'],
+//     credentials: true
+// };
 const corsOptions = {
-    origin: 'https://instagram-self-one.vercel.app',
+    origin: 'https://instaclonesahil.netlify.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     exposedHeaders: ['Content-Length'],
