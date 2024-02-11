@@ -41,9 +41,14 @@ server.listen(PORT, () => {
 
 const io = socket(server, {
     cors: {
-        origin: 'http://localhost:5173',
+        origin: 'https://instaclonesahil.netlify.app',
     }
 })
+// const io = socket(server, {
+//     cors: {
+//         origin: 'http://localhost:5173',
+//     }
+// })
 global.onlineuser = new Map()
 
 io.on('connection', (socket) => {
