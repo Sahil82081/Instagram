@@ -20,7 +20,7 @@ const socket = require('socket.io')
 //     credentials: true
 // };
 const corsOptions = {
-    origin: 'https://instaclonesahil.netlify.app',
+    origin: process.env.DOMAIN,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     exposedHeaders: ['Content-Length'],
@@ -34,9 +34,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/api', route)
 
 const server = createServer(app)
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.status(200).json({
-    Message:"Hello"
+        Message: "Hello"
     })
 })
 server.listen(PORT, () => {
@@ -45,7 +45,7 @@ server.listen(PORT, () => {
 
 const io = socket(server, {
     cors: {
-        origin: 'https://instaclonesahil.netlify.app',
+        origin: process.env.DOMAIN,
     }
 })
 // const io = socket(server, {
